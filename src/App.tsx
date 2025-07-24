@@ -60,6 +60,10 @@ function App() {
     setSelectedTask(updatedTask);
   };
 
+  const handleViewChange = (view: string) => {
+    setCurrentView(view as ViewType);
+  };
+
   const renderMainContent = () => {
     switch (currentView) {
       case 'dashboard':
@@ -103,12 +107,12 @@ function App() {
       />
       
       {/* Sidebar */}
-      <Sidebar
-        open={sidebarOpen}
-        currentView={currentView}
-        onViewChange={setCurrentView}
-        onToggle={() => setSidebarOpen(!sidebarOpen)}
-      />
+              <Sidebar
+          open={sidebarOpen}
+          currentView={currentView}
+          onViewChange={handleViewChange}
+          onToggle={() => setSidebarOpen(!sidebarOpen)}
+        />
 
       {/* Main Content Area */}
       <div className={`flex-1 flex flex-col transition-all duration-300 ${

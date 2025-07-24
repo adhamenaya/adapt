@@ -52,7 +52,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
       change: '+12%',
       changeType: 'increase' as const,
       icon: Clock,
-      color: 'blue',
+      color: 'blue' as const,
       description: 'Tasks currently in progress'
     },
     {
@@ -62,7 +62,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
       change: '+3.2%',
       changeType: 'increase' as const,
       icon: CheckCircle,
-      color: 'green',
+      color: 'green' as const,
       description: 'Tasks completed on time'
     },
     {
@@ -72,7 +72,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
       change: '-2',
       changeType: 'decrease' as const,
       icon: AlertTriangle,
-      color: 'red',
+      color: 'red' as const,
       description: 'Tasks past due date'
     },
     {
@@ -82,7 +82,7 @@ export const Dashboard: React.FC<DashboardProps> = ({
       change: '-0.5d',
       changeType: 'decrease' as const,
       icon: TrendingUp,
-      color: 'purple',
+      color: 'purple' as const,
       description: 'Average time to respond'
     },
   ];
